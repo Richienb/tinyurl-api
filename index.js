@@ -10,7 +10,7 @@ module.exports = async (url, alias) => {
 	assert.string(url)
 
 	if (alias) {
-		assert.string(url)
+		assert.string(alias)
 	}
 
 	const response = await ky("https://tinyurl.com/api-create.php", {
