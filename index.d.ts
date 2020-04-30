@@ -1,15 +1,18 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+Shorten a url with TinyURL.
+@param url The url to shorten.
+@param alias The custom alias for the shortened url.
 @example
 ```
-const theModule = require("the-module");
+const tinyurl = require("tinyurl-api");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const url = await tinyurl("https://google.com");
+
+	console.log(url);
+})();
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+declare function tinyurl(url: string, alias?: string): Promise<string>
 
-export = theModule
+export = tinyurl

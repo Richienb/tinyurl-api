@@ -1,41 +1,39 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# tinyurl-api [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/tinyurl-api/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/tinyurl-api)
 
-My awesome module.
+Shorten a url with TinyURL.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/tinyurl-api.png)](https://npmjs.com/package/tinyurl-api)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install tinyurl-api
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const tinyurl = require("tinyurl-api");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const url = await tinyurl("https://google.com");
+
+	console.log(url);
+})();
 ```
 
 ## API
 
-### theModule(input, options?)
+### tinyurl(url, alias?)
 
-#### input
+#### url
 
 Type: `string`
 
-Lorem ipsum.
+The url to shorten.
 
-#### options
+#### alias
 
-Type: `object`
+Type: `string`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The custom alias for the shortened url.
